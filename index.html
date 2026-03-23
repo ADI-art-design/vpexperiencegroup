@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VP Experience Group | Nightlife & Dining</title>
+    <title>VP Experience Group | Nightlife & Dining Excellence</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* CSS INTEGRADO - No borrar nada de aquí */
         :root {
             --azul-marino: #001f3f;
             --dorado: #d4af37;
             --blanco: #ffffff;
             --gris-claro: #f5f5f5;
+            --negro-profundo: #000c1a;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 
-        body { font-family: 'Montserrat', sans-serif; background-color: var(--blanco); color: var(--azul-marino); }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--blanco); color: var(--azul-marino); line-height: 1.6; }
 
         /* Header */
         header {
@@ -29,27 +29,29 @@
             justify-content: space-between;
             align-items: center;
             z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
         }
 
-        .logo-container img { height: 50px; width: auto; }
+        .logo-container img { height: 55px; width: auto; }
 
         nav a {
             color: white;
             text-decoration: none;
             margin-left: 20px;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
         }
 
         nav a:hover { color: var(--dorado); }
 
         /* Secciones */
-        section { padding: 120px 10% 60px; min-height: 400px; }
+        section { padding: 120px 10% 80px; }
 
         #inicio {
-            background: linear-gradient(rgba(0,31,63,0.8), rgba(0,31,63,0.8)), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,31,63,0.85), rgba(0,31,63,0.85)), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070') no-repeat center center/cover;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -59,61 +61,92 @@
             text-align: center;
         }
 
-        h1 { font-size: 3rem; border-bottom: 4px solid var(--dorado); padding-bottom: 10px; margin-bottom: 20px; }
+        h1 { font-size: 3.5rem; border-bottom: 4px solid var(--dorado); padding-bottom: 10px; margin-bottom: 20px; letter-spacing: 3px; }
+        .hero-subtitle { font-size: 1.2rem; letter-spacing: 5px; color: var(--dorado); font-weight: 300; }
 
-        h2 { text-align: center; margin-bottom: 50px; font-size: 2.2rem; text-transform: uppercase; letter-spacing: 2px; }
+        h2 { text-align: center; margin-bottom: 60px; font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; color: var(--azul-marino); position: relative; }
+        h2::after { content: ''; width: 80px; height: 4px; background: var(--dorado); position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); }
 
-        /* Servicios Grid */
-        .servicios-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
+        /* Servicios */
+        .servicios-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
         .servicio-card {
             background: var(--gris-claro);
-            padding: 40px;
+            padding: 50px 30px;
             text-align: center;
-            border-top: 5px solid var(--dorado);
-            transition: 0.3s;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 6px solid var(--dorado);
+            transition: 0.4s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         }
+        .servicio-card:hover { transform: translateY(-15px); background: var(--azul-marino); color: white; }
+        .servicio-card h3 { margin-bottom: 20px; color: var(--dorado); font-size: 1.5rem; }
 
-        .servicio-card:hover { transform: translateY(-10px); background: var(--azul-marino); color: white; }
-        .servicio-card h3 { margin-bottom: 15px; color: var(--dorado); }
+        /* Casos de Éxito (Catálogo) */
+        #exitos { background: var(--negro-profundo); color: white; }
+        #exitos h2 { color: white; }
+        .exitos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; }
+        .exito-item {
+            position: relative;
+            overflow: hidden;
+            height: 300px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 4px;
+        }
+        .exito-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; opacity: 0.7; }
+        .exito-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, var(--azul-marino));
+            padding: 30px;
+            transform: translateY(20px);
+            transition: 0.4s;
+        }
+        .exito-item:hover img { transform: scale(1.1); opacity: 1; }
+        .exito-item:hover .exito-overlay { transform: translateY(0); }
+        .exito-overlay h4 { color: var(--dorado); font-size: 1.3rem; margin-bottom: 5px; }
 
         /* Contacto */
-        #contacto { background: var(--gris-claro); }
+        .contacto-flex { display: flex; flex-wrap: wrap; gap: 50px; justify-content: center; }
         .form-container {
+            flex: 1;
+            min-width: 300px;
             max-width: 600px;
-            margin: 0 auto;
             background: var(--azul-marino);
             padding: 40px;
-            border-radius: 8px;
+            border-radius: 5px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
         }
         .form-container input, .form-container textarea {
             width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            margin-bottom: 25px;
+            background: rgba(255,255,255,0.05);
             border: 1px solid var(--dorado);
             color: white;
+            font-family: inherit;
         }
         .btn-enviar {
             background: var(--dorado);
             color: var(--azul-marino);
             width: 100%;
-            padding: 15px;
+            padding: 18px;
             border: none;
-            font-weight: 700;
+            font-weight: 800;
             cursor: pointer;
             text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
         }
+        .btn-enviar:hover { background: white; transform: scale(1.02); }
+
+        footer { background: #000; color: #666; text-align: center; padding: 40px; font-size: 0.8rem; border-top: 1px solid #222; }
 
         @media (max-width: 768px) {
-            header { flex-direction: column; }
-            nav { margin-top: 15px; }
-            h1 { font-size: 2rem; }
+            h1 { font-size: 2.2rem; }
+            header { flex-direction: column; padding: 15px; }
+            nav { margin-top: 20px; }
+            nav a { margin: 0 10px; font-size: 0.7rem; }
         }
     </style>
 </head>
@@ -126,11 +159,13 @@
         <nav>
             <a href="#inicio">Inicio</a>
             <a href="#servicios">Servicios</a>
+            <a href="#exitos">Casos de Éxito</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
     <section id="inicio">
+        <p class="hero-subtitle">ELITE MANAGEMENT</p>
         <h1>VP EXPERIENCE GROUP</h1>
         <p>RESTAURANTES • BARES • ANTROS</p>
     </section>
@@ -140,33 +175,66 @@
         <div class="servicios-container">
             <div class="servicio-card">
                 <h3>Mixología & Conceptos</h3>
-                <p>Diseñamos el alma de su barra. Ingeniería de menú y coctelería de autor diseñada para ser tendencia y maximizar la rentabilidad.</p>
+                <p>Diseñamos barras de alto impacto e ingeniería de menú para maximizar la rentabilidad y el estatus de su marca.</p>
             </div>
             <div class="servicio-card">
                 <h3>Nightlife Management</h3>
-                <p>Operación de alto impacto. Control total de inventarios, flujos de seguridad y atmósfera en antros y bares de primer nivel.</p>
+                <p>Operación experta para antros y venues. Control de flujos, seguridad y atmósferas sensoriales de primer nivel.</p>
             </div>
             <div class="servicio-card">
-                <h3>PR & Marketing</h3>
-                <p>El lugar donde todos quieren estar. Estrategias de relaciones públicas y posicionamiento para garantizar el Sold Out cada noche.</p>
+                <h3>PR & Experience</h3>
+                <p>Estrategias de posicionamiento y relaciones públicas para asegurar que su establecimiento sea el epicentro de la escena.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="exitos">
+        <h2>Casos de Éxito</h2>
+        <div class="exitos-grid">
+            <div class="exito-item">
+                <img src="https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=1000" alt="Antro High-End">
+                <div class="exito-overlay">
+                    <h4>Diamond Club</h4>
+                    <p>Optimización operativa y Sold Out constante.</p>
+                </div>
+            </div>
+            <div class="exito-item">
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1000" alt="Restaurante Lounge">
+                <div class="exito-overlay">
+                    <h4>Azure Rooftop</h4>
+                    <p>Diseño de concepto gastronómico y mixología.</p>
+                </div>
+            </div>
+            <div class="exito-item">
+                <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=1000" alt="Speakeasy Bar">
+                <div class="exito-overlay">
+                    <h4>The Velvet Room</h4>
+                    <p>Posicionamiento de marca y gestión VIP.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="contacto">
-        <h2>Contáctenos</h2>
-        <div class="form-container">
-            <form>
-                <input type="text" placeholder="Nombre completo" required>
-                <input type="email" placeholder="Correo electrónico" required>
-                <textarea rows="4" placeholder="Mensaje"></textarea>
-                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
-            </form>
+        <h2>Hablemos de su Proyecto</h2>
+        <div class="contacto-flex">
+            <div class="form-container">
+                <form action="https://formspree.io/f/xyzkpvvo" method="POST">
+                    <input type="text" name="Nombre" placeholder="Nombre completo" required>
+                    <input type="email" name="_replyto" placeholder="Correo electrónico (djvicancun@gmail.com)" required>
+                    <textarea name="Mensaje" rows="5" placeholder="Cuéntenos sobre su establecimiento..." required></textarea>
+                    
+                    <input type="hidden" name="_subject" value="Nuevo contacto desde VP Experience Group Web">
+                    
+                    <button type="submit" class="btn-enviar">Enviar Solicitud</button>
+                </form>
+            </div>
         </div>
     </section>
 
-    <footer style="background: #000; color: white; text-align: center; padding: 30px;">
-        <p>&copy; 2026 VP Experience Group</p>
+    <footer>
+        <p>&copy; 2026 VP EXPERIENCE GROUP | Ciudad de México - Cancún</p>
+        <p style="margin-top: 10px; color: var(--dorado);">Curating Exceptional Moments</p>
     </footer>
 
 </body>
