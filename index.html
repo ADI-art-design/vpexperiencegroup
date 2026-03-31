@@ -160,6 +160,7 @@
     <a href="#inicio">Inicio</a>
     <a href="#nosotros">Nosotros</a> 
     <a href="#servicios">Servicios</a>
+    <a href="#branding">Diseño & Impresión</a>
     <a href="#exitos">Éxitos</a>
     <a href="#contacto">Contacto</a>
 </nav>
@@ -243,6 +244,63 @@
     <p><strong>Blindaje operativo automatizado.</strong> Implementamos sistemas de alerta inteligente que detectan anomalías en tiempo real, permitiéndole gestionar su negocio con precisión quirúrgica sin necesidad de presencia física constante.</p>
 </div>
         </div>
+    <section id="branding" style="background-color: var(--gris-claro);">
+    <h2>VP Brand & Print Lab</h2>
+    <div class="branding-flex">
+        <div class="branding-text">
+            <h4 style="color: var(--dorado); text-transform: uppercase;">Identidad de Sabor</h4>
+            <p>Elevamos la imagen de su negocio de comida, desde la identidad visual hasta la impresión de menús y mandiles. Capture la esencia de su sabor.</p>
+            
+            <div class="branding-gallery">
+                <div class="brand-item">
+                    <img src="el-brody-logo.jpg" alt="Logo de El Brody">
+                    <p>Branding Completo</p>
+                </div>
+                <div class="brand-item">
+                    <img src="super-tortas-menu.jpg" alt="Menú de Super Tortas">
+                    <p>Diseño de Menú</p>
+                </div>
+                <div class="brand-item">
+                    <img src="brody-mandil.jpg" alt="Mandil personalizado">
+                    <p>Imprenta y Textil</p>
+                </div>
+            </div>
+        </div>
+        <div class="branding-image">
+            <img src="collage-disenos.jpg" alt="Casos de éxito de diseño e impresión VP" style="width: 100%; border-radius: 8px; border: 3px solid var(--dorado); box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+</section>
+
+<style>
+    .branding-flex { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
+    .branding-text { flex: 1.5; min-width: 300px; }
+    .branding-image { flex: 1; min-width: 250px; }
+    
+    .branding-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 20px;
+    }
+    .brand-item {
+        background: white;
+        padding: 10px;
+        text-align: center;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        transition: 0.3s;
+    }
+    .brand-item:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    .brand-item img {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 4px;
+        margin-bottom: 5px;
+    }
+    .brand-item p { font-size: 0.8rem; color: #555; }
+</style>
     </section>
 
     <section id="exitos">
