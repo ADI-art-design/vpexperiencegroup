@@ -205,24 +205,130 @@
             <div class="exito-card">
                 <img src="la-coyota-atmosphere.jpg" alt="La Coyota Atmosphere">
                 <div class="exito-info">
-                    <h4 style="color: var(--dorado);">LA COYOTA CANCÚN</h4>
-                    <p>Ingeniería de atmósfera y atmósfera sensorial dinámica.</p>
-                </div>
+                    <style>
+    .exitos-grid-compacta {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .exito-card-interactive {
+        position: relative;
+        height: 300px;
+        perspective: 1000px; /* Para efecto de profundidad si quisiéramos giro, pero usaremos transición suave */
+        overflow: hidden;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        cursor: pointer;
+    }
+
+    /* CAPA 1: LA IMAGEN */
+    .exito-front {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s ease;
+    }
+    .exito-front img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* CAPA 2: EL CUADRO AZUL (CONTENIDO AL PASAR EL MOUSE) */
+    .exito-back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--azul-marino);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+        transform: translateY(100%); /* Escondido abajo por defecto */
+        transition: transform 0.4s ease;
+        border-top: 5px solid var(--dorado);
+    }
+
+    /* EFECTO HOVER */
+    .exito-card-interactive:hover .exito-back {
+        transform: translateY(0); /* Sube el cuadro azul */
+    }
+
+    .exito-back h4 {
+        color: var(--dorado);
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+    }
+
+    .exito-back p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+</style>
+
+<section id="exitos">
+    <h2>Experiencias de Éxito</h2>
+    <div class="exitos-grid-compacta">
+
+        <div class="exito-card-interactive">
+            <div class="exito-front">
+                <img src="02.jpg" alt="La Coyota">
+            </div>
+            <div class="exito-back">
+                <h4>La Coyota Cancún</h4>
+                <p>Ingeniería de atmósfera y gestión de iluminación sensorial dinámica para crear un ambiente único.</p>
             </div>
         </div>
-    </section>
 
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <div class="form-wrap">
-            <form action="https://formspree.io/f/tu_codigo_aqui" method="POST">
-                <input type="text" name="Nombre" placeholder="Nombre" required>
-                <input type="email" name="Email" placeholder="Correo" required>
-                <textarea name="Mensaje" rows="5" placeholder="¿Cómo podemos ayudarle?" required></textarea>
-                <button type="submit" class="btn-submit">Enviar Solicitud</button>
-            </form>
+        <div class="exito-card-interactive">
+            <div class="exito-front">
+                <img src="yesterday-bar.jpg" alt="Yesterday Bar">
+            </div>
+            <div class="exito-back">
+                <h4>Yesterday Bar</h4>
+                <p>[Esperando tu descripción, Víctor...]</p>
+            </div>
         </div>
-    </section>
+
+        <div class="exito-card-interactive">
+            <div class="exito-front">
+                <img src="over-30.jpg" alt="Over 30 Club">
+            </div>
+            <div class="exito-back">
+                <h4>Over 30 Club</h4>
+                <p>[Esperando tu descripción, Víctor...]</p>
+            </div>
+        </div>
+
+        <div class="exito-card-interactive">
+            <div class="exito-front">
+                <img src="zcala-bar.jpg" alt="Zcala Bar">
+            </div>
+            <div class="exito-back">
+                <h4>Zcala Bar</h4>
+                <p>[Esperando tu descripción, Víctor...]</p>
+            </div>
+        </div>
+
+        <div class="exito-card-interactive">
+            <div class="exito-front">
+                <img src="all-ritmo.jpg" alt="Hotel All Ritmo">
+            </div>
+            <div class="exito-back">
+                <h4>Hotel All Ritmo</h4>
+                <p>[Esperando tu descripción, Víctor...]</p>
+            </div>
+        </div>
+
+    </div>
+</section>
 
     <footer>
         <p>&copy; 2026 VP EXPERIENCE GROUP | Lealtad • Visión • Resultados</p>
