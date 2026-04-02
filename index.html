@@ -325,7 +325,49 @@
 
     </div>
 </section>
+<section id="contacto" style="background-color: var(--blanco);">
+        <h2>Contacto</h2>
+        <div class="form-wrap" style="max-width: 700px; margin: 0 auto; background: var(--azul-marino); padding: 40px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+            <p style="color: var(--dorado); text-align: center; margin-bottom: 30px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">
+                Iniciemos la Transformación de su Negocio
+            </p>
+            
+            <form action="https://formspree.io/f/tu_codigo_aqui" method="POST">
+                <div style="margin-bottom: 20px;">
+                    <label style="color: white; display: block; margin-bottom: 5px; font-size: 0.8rem; text-transform: uppercase;">Nombre Completo</label>
+                    <input type="text" name="Nombre" placeholder="Ej. Victor H. Pérez" required 
+                           style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid var(--dorado); color: white; font-family: inherit;">
+                </div>
 
+                <div style="margin-bottom: 20px;">
+                    <label style="color: white; display: block; margin-bottom: 5px; font-size: 0.8rem; text-transform: uppercase;">Correo Electrónico</label>
+                    <input type="email" name="Email" placeholder="contacto@vpexperience.com" required 
+                           style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid var(--dorado); color: white; font-family: inherit;">
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label style="color: white; display: block; margin-bottom: 5px; font-size: 0.8rem; text-transform: uppercase;">Tipo de Proyecto</label>
+                    <select name="Servicio" style="width: 100%; padding: 12px; background: #001f3f; border: 1px solid var(--dorado); color: white; font-family: inherit;">
+                        <option value="Consultoria">Consultoría Operativa</option>
+                        <option value="Branding">Brand & Print Lab</option>
+                        <option value="SaaS">Smart Monitoring (SaaS)</option>
+                        <option value="Hotel">Lifestyle Hospitality</option>
+                    </select>
+                </div>
+
+                <div style="margin-bottom: 25px;">
+                    <label style="color: white; display: block; margin-bottom: 5px; font-size: 0.8rem; text-transform: uppercase;">Mensaje</label>
+                    <textarea name="Mensaje" rows="5" placeholder="Cuéntenos sobre su establecimiento..." required 
+                              style="width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid var(--dorado); color: white; font-family: inherit; resize: none;"></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit" 
+                        style="background: var(--dorado); color: var(--azul-marino); width: 100%; padding: 15px; border: none; font-weight: 700; text-transform: uppercase; cursor: pointer; transition: 0.3s; letter-spacing: 2px;">
+                    Enviar Solicitud
+                </button>
+            </form>
+        </div>
+    </section>
     <footer>
         <p>&copy; 2026 VP EXPERIENCE GROUP | Lealtad • Visión • Resultados</p>
     </footer>
