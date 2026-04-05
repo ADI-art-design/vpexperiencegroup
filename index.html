@@ -176,6 +176,23 @@
 </div>
 
 <style>
+/* Esto obliga al video a ocupar todo el ancho y no pelearse con las tarjetas */
+.mapping-highlight {
+    grid-column: 1 / -1; /* Ocupa desde la primera hasta la última columna */
+    width: 100%;
+    margin-bottom: 30px; /* Separa el video de las tarjetas de abajo */
+}
+
+/* Ajuste para que en móviles también se vea bien */
+@media (max-width: 768px) {
+    .mapping-highlight {
+        grid-column: span 1;
+        height: auto;
+    }
+    .mapping-video-wrapper {
+        height: 300px; /* Un poco más bajo en celular para que no tape todo */
+    }
+}    
 .mapping-highlight {
     margin: 40px 0;
     border-radius: 15px;
