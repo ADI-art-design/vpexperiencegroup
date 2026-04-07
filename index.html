@@ -66,7 +66,7 @@
 
         /* NOSOTROS */
         .nosotros-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-        .nosotros-img img { width: 100%; border-radius: 10px; border: 3px solid var(--dorado); }
+        .nosotros-img img { width: 60%; border-radius: 10px; border: 3px solid var(--dorado); }
         .mv-container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
         .mv-box { background: var(--azul-marino); color: white; padding: 25px; border-left: 4px solid var(--dorado); }
 
@@ -151,6 +151,7 @@
                 </div>
             </div>
             <div class="nosotros-img"><img src="foto corporativa 05.jpg" alt="Victor H. Pérez"></div>
+            <div class="badge-years">Victor H. Pérez/Director</div>
         </div>
         <div class="nosotros-filosofia-wrap">
     <div class="filosofia-content">
@@ -215,22 +216,22 @@
     justify-self: center;
 }
 .foto-perfil-filtro {
-    width: 240px;
-    height: 302px;
+    width: 300px;
+    height: 377px;
     object-fit: cover;
     border-radius: 8px;
     filter: grayscale(40%) contrast(110%);
 }
 .badge-years {
     position: absolute;
-    top: -10px;
+    down: -10px;
     right: -10px;
     background: #D4AF37;
     color: #001f3f;
     padding: 10px 15px;
     font-weight: 800;
     border-radius: 4px;
-    transform: rotate(5deg);
+    transform: rotate(0deg);
 }
 
 @media (max-width: 900px) {
