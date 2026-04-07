@@ -152,6 +152,92 @@
             </div>
             <div class="nosotros-img"><img src="tu-foto-corporativa.jpg" alt="Victor H. Pérez"></div>
         </div>
+        <div class="nosotros-filosofia-wrap">
+    <div class="filosofia-content">
+        <div class="filosofia-txt">
+            <h3 class="gold-text">Ingeniería Sensorial: Mi Compromiso</h3>
+            <p>Más que un proveedor, me convierto en un aliado estratégico. Mi paso por los escenarios más competitivos de la Riviera Maya me enseñó que el éxito de un lugar no es casualidad; es el resultado de una <strong>curaduría técnica impecable</strong>.</p>
+            
+            <p>En <strong>VP Experience Group</strong>, no solo instalamos equipos; diseñamos la atmósfera que garantiza que tus clientes vivan una experiencia que valga la pena repetir. Mi objetivo en la CDMX es claro: ayudar a los empresarios a <strong>acreditar sus conceptos</strong> mediante tecnología de vanguardia y una visión de negocio probada.</p>
+            
+            <div class="frase-libro">
+                <i class="fas fa-quote-left"></i>
+                <p>El valor de las cosas no reside en su costo, sino en la emoción que generan y el reconocimiento que dejan tras de sí.</p>
+            </div>
+        </div>
+        <div class="filosofia-img-box">
+             <img src="tu-foto-perfil.jpg" alt="Victor Hugo Perez" class="foto-perfil-filtro">
+             <div class="badge-years">25+ AÑOS</div>
+        </div>
+    </div>
+</div>
+
+<style>
+.nosotros-filosofia-wrap {
+    background: rgba(255, 255, 255, 0.03); /* Un fondo muy sutil para diferenciarlo */
+    padding: 60px 40px;
+    border-radius: 15px;
+    margin-top: 40px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+.filosofia-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+.gold-text {
+    color: #D4AF37;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.filosofia-txt p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #f0f0f0;
+}
+.frase-libro {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(212, 175, 55, 0.05);
+    border-left: 3px solid #D4AF37;
+}
+.frase-libro p {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #D4AF37;
+    margin: 0;
+}
+.filosofia-img-box {
+    position: relative;
+    justify-self: center;
+}
+.foto-perfil-filtro {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    filter: grayscale(40%) contrast(110%);
+}
+.badge-years {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #D4AF37;
+    color: #001f3f;
+    padding: 10px 15px;
+    font-weight: 800;
+    border-radius: 4px;
+    transform: rotate(5deg);
+}
+
+@media (max-width: 900px) {
+    .filosofia-content { grid-template-columns: 1fr; }
+    .filosofia-img-box { order: -1; }
+}
+</style>
     </section>
 
     <section id="servicios">
